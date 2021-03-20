@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SAMA3NYKHAY </title>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+      <ul>
+        <a href="index.html">
+          <li class="brand"> <i class="fab fa-napster"></i> SAMA3NYKHAY </li>
+        </a>
+        <a href="p2.html">
+            <li><i class="fas fa-headphones-alt"></i> Listen</li>
+          
+          </a>
+          <a href="javascript:void(0)">
+            <li onclick="logout()"><i class="fas fa-sign-out-alt"></i> logout</li>
+        </a>
+       
+      </ul>
+    </nav>
+
+    <div class="imge">
+      <img src="images/pic.png" alt="">
+    </div>
+
+    <div class="content">
+      <em>welcome  <span id="user"> </span></em>
+    </div>
+
+    
+
+
+</body>
+
+<script>
+     $(document).ready(function () {
+         var user = localStorage.getItem("user") ;
+         if(user){
+            document.getElementById("user").innerHTML = user
+         }else{
+             document.location.href = "p1.html"
+         }
+
+        
+            });
+
+            
+        function logout(){
+            localStorage.clear();
+            document.location.href = "index.html"
+        }
+
+
+</script>
+</html>

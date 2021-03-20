@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Register SAMA3NYKHAY</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+
+        <link rel="stylesheet" href="css/progres-bar.css">
+
+    <link href="css/style.css" rel="stylesheet" media="all">
+    <script>
+          var user = localStorage.getItem("user");
+            if (!user) {
+                document.location.href = "p1.html"
+            }
+
+    </script>
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+
+        <ul>
+            <a href="index.html">
+                <li class="brand"> <i class="fab fa-napster"></i> SAMA3NYKHAY </li>
+          
+            <a href="p2.html">
+                <li><i class="fas fa-headphones-alt"></i> Listen</li>
+            </a>
+            <a href="javascript:void(0)">
+                <li onclick="logout()"><i class="fas fa-sign-out-alt"></i> logout</li>
+            </a>
+        </ul>
+    </nav>
+ 
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+
+            <table>
+                <tr>
+                    <td>   <div class="mediPlayer">
+                        <audio class="listen" preload="none" data-size="250" src="sounds/drake.mp3"></audio>
+                        <h1 style="color: goldenrod;">Drake - Toosie Slide</h1>
+                    </div></td>
+                    <td>   <div class="mediPlayer">
+                        <audio class="listen" preload="none" data-size="250" src="sounds/Rahma--(Hommage).mp3"></audio>
+                        <h1 style="color: goldenrod;">Lil Side - Hommage</h1>
+                    </div></td>
+                    <td>   <div class="mediPlayer">
+                        <audio class="listen" preload="none" data-size="250" src="sounds/wallah mana3ref.mp3"></audio>
+                        <h1 style="color: goldenrod;">Lil Side - Wallah</h1>
+                    </div></td>
+                    <td>   <div class="mediPlayer">
+                        <audio class="listen" preload="none" data-size="250" src="sounds/dommar.mp3"></audio>
+                        <h1 style="color: goldenrod;">Lil Side - Dommar</h1>
+                    </div></td>
+                </tr>
+            </table>
+         
+          
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/player.js"></script>
+    <script>
+
+        $(document).ready(function () {
+          
+
+            $('.mediPlayer').mediaPlayer();
+
+        });
+
+        function logout(){
+            localStorage.clear();
+            document.location.href = "index.html"
+        }
+
+    </script>
+
+</body>
+
+</html>
